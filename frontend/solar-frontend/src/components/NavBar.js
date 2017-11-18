@@ -31,9 +31,9 @@ class NavBar extends React.Component{
             <Typography type="title" color="inherit" className={classes.flex}>
               Title
             </Typography>
-            <Link to='/'><Button color="contrast">Home</Button></Link>
+            <Link to='/' style={{ textDecoration: 'none' }}><Button color="contrast">Home</Button></Link>
             <Button color="contrast">Account</Button>
-            <Link to='/listingspage'><Button color="contrast">Listings</Button></Link>
+            <Link to='/listingspage' style={{ textDecoration: 'none' }}><Button color="contrast">Listings</Button></Link>
             <Button color="contrast">Support</Button>
           </Toolbar>
         </AppBar>
