@@ -27,6 +27,10 @@ Bam. You're done.
 ## Other
 1. Your `superuser` was created with username `admin` and password `gobears123`
 2. The project was initialized as 'berc' but the app itself is named 'solar'
+3. If you look at my project WolfPak (https://github.com/KaitoKid/WolfPak), the most important *folders* to look at are `models` and `views`
+4. The most important files to look at are `urls.py` and `serializers.py`
+5. Essentially, each file in `views` is getting passed into `urls.py` as a REST API endpoint for me to POST/GET data
+6. If you look at the folder `models`, you will notice I initiate each model in `__init__.py`, however, you can store all of your models within `models.py` instead. Just don't forget to init them.
 
 ## Where to learn
 1. Setup was followed: http://www.django-rest-framework.org/tutorial/quickstart/
