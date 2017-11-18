@@ -4,7 +4,10 @@ import TabNavigator from '../components/TabNavigator'
 class listingsPage extends React.Component {
   render () {
     return(
-      <TabNavigator currentPage='listingsPage' />
+      <div>
+        <TabNavigator currentPage='listingsPage' />
+        <p> text </p>
+      </div>
     )
   }
 }

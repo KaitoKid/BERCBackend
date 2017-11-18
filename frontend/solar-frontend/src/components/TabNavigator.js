@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import { string } from 'prop-types';
+import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Button from 'material-ui/Button';
 
@@ -10,12 +10,27 @@ class TabNavigator extends React.Component {
     super(props)
     this.state = { currentPage: props.currentPage }
   }
+
+  componentWIllUpdate(nextProps) {
+    if (this.props !== nextProps) {
+      this.setState({ currentPage: nextProps.currentPage })
+    }
+  }
+
+  static contextTypes = {
+    router: PropTypes.object,
+  };
+
+  _handleNavigate () {
+    this.context.router.push('/foo')
+  }
+
   render() {
     const { classes } = this.props
     return (
       <div>
         <Link to='../containers/homePage' style={{ textDecoration: 'none' }}>
-          { this.state.currentPage != 'homePage'
+          { this.state.currentPage !== 'homePage'
           ? <Button className={classes.buttonOff} onClick={()=>this.setState({ currentPage: 'homePage'})}>
             Home
           </Button>
@@ -25,7 +40,7 @@ class TabNavigator extends React.Component {
           }
         </Link>
         <Link to='../containers/listingsPage' style={{ textDecoration: 'none' }}>
-          { this.state.currentPage != 'listingsPage'
+          { this.state.currentPage !== 'listingsPage'
           ? <Button className={classes.buttonOff} onClick={()=>this.setState({ currentPage: 'listingsPage'})}>
             Listings
           </Button>
@@ -50,7 +65,7 @@ const styles = theme => ({
 });
 
 TabNavigator.Proptype = {
-	currentPage: string
+	currentPage: PropTypes.string
 }
 
 export default withStyles(styles)(TabNavigator);
