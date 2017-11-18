@@ -4,6 +4,7 @@ import { withStyles } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
 import Grid from 'material-ui/Grid';
 import SimpleMediaCard from '../components/SimpleMediaCard';
+import RangeSlider from '../components/RangeSlider';
 
 const styles = theme => ({
   root: {
@@ -18,14 +19,14 @@ const styles = theme => ({
 });
 
 const gridProperties = {
-    direction: 'row',
+    direction: 'column',
     justify: 'center',
     alignItems: 'center',
   };
 
 function CenteredGrid(props) {
   const gridProperties = {
-      direction: 'row',
+      direction: 'column',
       justify: 'center',
       alignItems: 'center',
     };
@@ -41,8 +42,18 @@ function CenteredGrid(props) {
         direction={direction}
         justify={justify}
       >
-        <SimpleMediaCard />
-      </Grid>
+        
+       <SimpleMediaCard /> 
+       <RangeSlider />
+
+
+      </Grid>   
+
+
+      
+
+
+
     </div>
   );
 }

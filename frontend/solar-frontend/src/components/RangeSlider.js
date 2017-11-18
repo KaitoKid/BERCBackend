@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import Slider from 'react-rangeslider'
+import 'react-rangeslider/lib/index.css'
+
 
 class RangeSlider extends Component {
   constructor (props, context) {
@@ -26,7 +28,7 @@ class RangeSlider extends Component {
   render () {
     const { value } = this.state
     return (
-      <div className='slider'>
+      <div className='slider' style={{width:864}}>
         <Slider
           min={0}
           max={100}
