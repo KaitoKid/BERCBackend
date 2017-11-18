@@ -1,9 +1,9 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Home from './HomePage'
-import ListingsPage from './listingsPage'
+import ListingsPage from './ListingsPage'
 import ListingView from './ListingView'
-
+import ThankYou from './ThankYou'
 // The Main component renders one of the three provided
 // Routes (provided that one matches). Both the /roster
 // and /schedule routes will match any pathname that starts
@@ -15,6 +15,7 @@ const Main = () => (
       <Route exact path='/' component={Home}/>
       <Route path='/listingspage' component={ListingsPage}/>
       <Route path='/listingview' component={ListingView}/>
+      <Route path='/thankyou' component={ThankYou}/>
     </Switch>
   </main>
 )

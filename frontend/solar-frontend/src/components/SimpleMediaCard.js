@@ -5,6 +5,8 @@ import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
+import RangeSlider from '../components/RangeSlider'
+import PaperSheet from '../components/PaperSheet'
 
 const styles = {
   card: {
@@ -17,7 +19,7 @@ const styles = {
 
 function SimpleMediaCard(props) {
   const gridProperties = {
-      direction: 'row',
+      direction: 'column',
       justify: 'center',
       alignItems: 'center',
     };
@@ -40,22 +42,16 @@ function SimpleMediaCard(props) {
           <Typography component="p">
             Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
             across all continents except Antarctica
+            <br />
           </Typography>
         </CardContent>
         <CardActions>
-          <Grid
-            container
-            alignItems={alignItems}
-            direction={direction}
-            justify={justify}
-          >
-
-          <Button dense color="primary">
-            Purchase
-          </Button>
-          </Grid>
         </CardActions>
       </Card>
+
+      <div>
+        <PaperSheet/>
+      </div>
     </div>
   );
 }
