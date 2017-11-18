@@ -26,7 +26,7 @@ Bam. You're done.
 
 ## Other
 1. Your `superuser` was created with username `admin` and password `gobears123`
+2. The project was initialized as 'berc' but the app itself is named 'solar'
 
 ## Where to learn
-1. Setup was following: https://tutorial.djangogirls.org/en/
-2. You will need the Django Rest Framework: http://www.django-rest-framework.org/tutorial/quickstart/
+1. Setup was followed: http://www.django-rest-framework.org/tutorial/quickstart/
