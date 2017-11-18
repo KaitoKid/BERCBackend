@@ -34,6 +34,7 @@ class NavBar extends React.Component{
             <Link to='/'><Button color="contrast">Home</Button></Link>
             <Button color="contrast">Account</Button>
             <Link to='/listingspage'><Button color="contrast">Listings</Button></Link>
+            <Link to='/listingview'><Button color="contrast">Listing View</Button></Link>
             <Button color="contrast">Support</Button>
           </Toolbar>
         </AppBar>
