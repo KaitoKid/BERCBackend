@@ -6,7 +6,7 @@ class RangeSlider extends Component {
   constructor (props, context) {
     super(props, context)
     this.state = {
-      value: 8000
+      value: 0
     }
   }
 
