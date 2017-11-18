@@ -21,9 +21,29 @@ class HomePage extends React.Component {
               return (
                   <Card key={idx} className={classes.card}>
                     <CardContent>
-                      <Typography type="body1" className={classes.title}>
-                        {d.name} {d.location}
+                    <Grid container>
+                    <Grid item sm={11}>
+                      <Typography type="headline" component="h2">
+                        Name of Thing in Some Location
                       </Typography>
+                      <Typography type="body1" className={classes.title}>
+                        X sq. ft. in {d.location}
+                      </Typography>
+                      <Typography type="body1" className={classes.title}>
+                        $4000/8000 Completed
+                      </Typography>
+                      <Typography type="body1" className={classes.title}>
+                        Y monthly return per dollar
+                      </Typography>
+                      </Grid>
+                      <Grid item sm={1}>
+                      <CardMedia
+                        className={classes.cardImg}
+                        image="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Photovoltaik_Dachanlage_Hannover_-_Schwarze_Heide_-_1_MW.jpg/280px-Photovoltaik_Dachanlage_Hannover_-_Schwarze_Heide_-_1_MW.jpg"
+                        title="Contemplative Reptile"
+                      />
+                    </Grid>
+                    </Grid>
                     </CardContent>
                   </Card>
               )
@@ -53,6 +73,7 @@ class HomePage extends React.Component {
 const styles = theme => ({
   card: {
     minWidth: 275,
+    display: 'flex'
   },
   bullet: {
     display: 'inline-block',
@@ -70,6 +91,10 @@ const styles = theme => ({
   },
   media: {
     height: 600
+  },
+  cardImg: {
+    height: 100,
+    width: 100
   }
 });
 
