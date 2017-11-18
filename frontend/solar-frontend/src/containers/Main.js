@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Home from './HomePage'
-import ListingsPage from './ListingsPage'
+import ListingsPage from './listingsPage'
 import ListingView from './ListingView'
 
 // The Main component renders one of the three provided
