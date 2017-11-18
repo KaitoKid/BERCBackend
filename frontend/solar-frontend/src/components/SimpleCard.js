@@ -4,6 +4,7 @@ import { withStyles } from 'material-ui/styles';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
+import { Link } from 'react-router-dom'
 
 const styles = theme => ({
   card: {
@@ -37,18 +38,19 @@ function SimpleCard(props) {
             Word of the Day
           </Typography>
           <Typography type="headline" component="h2">
-            be{bull}nev{bull}o{bull}lent
+            oski{bull}bear
           </Typography>
           <Typography type="body1" className={classes.pos}>
             adjective
           </Typography>
           <Typography component="p">
-            well meaning and kindly.<br />
-            {'"a benevolent smile"'}
+            someone who makes the green choice.<br />
           </Typography>
         </CardContent>
         <CardActions>
-          <Button dense>Learn More</Button>
+          <Link to='/'>
+            <Button dense>Return to account</Button>
+          </Link>
         </CardActions>
       </Card>
     </div>

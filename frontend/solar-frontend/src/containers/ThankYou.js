@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Paper from 'material-ui/Paper';
 import Grid from 'material-ui/Grid';
-import DetailedCard from '../components/DetailedCard';
+import SimpleCard from '../components/SimpleCard';
 
 const styles = theme => ({
   root: {
@@ -41,7 +41,7 @@ function CenteredGrid(props) {
         direction={direction}
         justify={justify}
       >
-        <DetailedCard />
+        <SimpleCard />
       </Grid>
     </div>
   );
