@@ -24,3 +24,9 @@ Bam. You're done.
 2. Your models go in `models.py`, your controllers go in the `views.py` (it's weird), and your URLs go into `urls.py`
 3. You can run the server by calling `python manage.py runserver`
 
+## Other
+1. Your `superuser` was created with username `admin` and password `gobears123`
+
+## Where to learn
+1. Setup was following: https://tutorial.djangogirls.org/en/
+2. You will need the Django Rest Framework: http://www.django-rest-framework.org/tutorial/quickstart/
