@@ -5,7 +5,8 @@ import Paper from 'material-ui/Paper';
 import Grid from 'material-ui/Grid';
 import SimpleMediaCard from '../components/SimpleMediaCard';
 import RangeSlider from '../components/RangeSlider';
-
+import DetailedCard from '../components/DetailedCard';
+import PaperSheet from '../components/PaperSheet';
 import  {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 const data = [
       {name: '11/10/17', pv: 2400, amt: 2400},
@@ -18,8 +19,7 @@ const data = [
       {name: '11/17/17', pv: 4300, amt: 2100},
 ];
 
-import DetailedCard from '../components/DetailedCard';
-import PaperSheet from '../components/PaperSheet';
+
 
 
 const styles = theme => ({
@@ -71,9 +71,6 @@ function CenteredGrid(props) {
        <Legend />
        <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{r: 8}}/>
       </LineChart>
-
-
-      </Grid>   
 
 
        <DetailedCard />
