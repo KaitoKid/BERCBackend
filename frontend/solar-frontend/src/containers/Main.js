@@ -4,6 +4,8 @@ import Home from './HomePage'
 import ListingsPage from './ListingsPage'
 import ListingView from './ListingView'
 import ThankYou from './ThankYou'
+import CreateListing from './CreateListing'
+import EstimateRevenue from './EstimateRevenue'
 // The Main component renders one of the three provided
 // Routes (provided that one matches). Both the /roster
 // and /schedule routes will match any pathname that starts
@@ -16,6 +18,8 @@ const Main = () => (
       <Route path='/listingspage' component={ListingsPage}/>
       <Route path='/listingview' component={ListingView}/>
       <Route path='/thankyou' component={ThankYou}/>
+      <Route path='/createlisting' component={CreateListing}/>
+      <Route path='/estimaterevenue' component={EstimateRevenue}/>
     </Switch>
   </main>
 )

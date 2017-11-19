@@ -33,7 +33,7 @@ class NavBar extends React.Component{
             </Typography>
             <Link to='/'><Button color="contrast">Home</Button></Link>
             <Link to='/listingspage'><Button color="contrast">Listings</Button></Link>
-            <Button color="contrast">Create Listing</Button>
+            <Link to='/createlisting'><Button color="contrast">Create Listing</Button></Link>
             <Button color="contrast">Support</Button>
 
           </Toolbar>
