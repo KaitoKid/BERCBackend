@@ -57,13 +57,13 @@ class DetailedCard extends React.Component {
                 R
               </Avatar>
             }
-            title="Private land in Danville"
+            title="Apartment rooftop in South SF, CA"
             subheader="September 14, 2017"
           />
           <CardMedia
             className={classes.media}
-            image="https://dl6m636cbz9dr.cloudfront.net/2016/08/Millet-Site_Land-Lease-Blog.jpg"
-            title="Contemplative Reptile"
+            image="https://i.pinimg.com/736x/83/47/24/8347246fdc9a390fc9fb6d574c1f1dcb--roofing-options-best-roofing.jpg"
+            title="Apartment rooftop in South SF, CA"
           />
           <CardContent>
             <Typography component="p">
