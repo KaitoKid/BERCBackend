@@ -1,20 +1,21 @@
 import React from 'react';
 import { withStyles } from 'material-ui/styles';
-import Card, { CardActions, CardContent } from 'material-ui/Card';
+import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 import Input, { InputLabel } from 'material-ui/Input';
 import { FormControl, FormHelperText } from 'material-ui/Form';
 import IconButton from 'material-ui/IconButton';
+import { Link } from 'react-router-dom'
 
 class ListingsPage extends React.Component {
   render () {
     const { classes } = this.props
-    const data =[{"name":"test1", "location":"location1"},{"name":"test2", "location":"location2"},{"name":"test2", "location":"location2"}
-    ,{"name":"test2", "location":"location2"},{"name":"test2", "location":"location2"},{"name":"test2", "location":"location2"}
-    ,{"name":"test2", "location":"location2"},{"name":"test2", "location":"location2"},{"name":"test2", "location":"location2"}
-    ,{"name":"test2", "location":"location2"},{"name":"test2", "location":"location2"},{"name":"test2", "location":"location2"}]
+    const data =[{"name":"Private land in Danville", "location":"Danville, CA", "size": "size1", "completion": "Comp1", "ret":"ret1", "img":"https://dl6m636cbz9dr.cloudfront.net/2016/08/Millet-Site_Land-Lease-Blog.jpg"},
+    {"name":"test1", "location":"location1", "size": "size1", "completion": "Comp1", "ret":"ret1", "img":"img1"},
+    {"name":"test1", "location":"location1", "size": "size1", "completion": "Comp1", "ret":"ret1", "img":"img1"},
+    {"name":"test1", "location":"location1", "size": "size1", "completion": "Comp1", "ret":"ret1", "img":"img1"},]
     const MyMapComponent = withScriptjs(withGoogleMap((props) =>
       <GoogleMap
         defaultZoom={9}
@@ -32,20 +33,41 @@ class ListingsPage extends React.Component {
       <div style={{ marginTop: 10 }}>
         <Grid container>
         <Grid item sm={6}>
-          <div style={{overflow: 'scroll', height: 670 }}>
+          <div style={{overflow: 'scroll', height: 700 }}>
             {data.map(function(d, idx){
               return (
+                  <Link to='/listingview' style={{ textDecoration: 'none' }}>
                   <Card key={idx} className={classes.card}>
                     <CardContent>
-                      <Typography type="body1" className={classes.title}>
-                        {d.name} {d.location}
+                    <Grid container>
+                    <Grid item sm={9}>
+                      <div style={{ width: 420 }}>
+                      <Typography type="headline" component="h2">
+                        {d.name}
                       </Typography>
+                      </div>
+                      <Typography type="body1" className={classes.title}>
+                        {d.size} sq. ft., Distance: {d.location}
+                      </Typography>
+                      <Typography type="body1" className={classes.title}>
+                        ${d.completion} Raised, {d.ret} estimated monthly return per dollar
+                      </Typography>
+                      </Grid>
+                      <Grid item sm={3}>
+                      <CardMedia
+                        className={classes.cardImg}
+                        image={d.img}
+                        title=""
+                      />
+                    </Grid>
+                    </Grid>
                     </CardContent>
                   </Card>
+                  </Link>
               )
             })}
           </div>
-        </Grid>
+          </Grid>
         <Grid item sm={6}>
           <div>
             <FormControl className={classes.formControl}>
@@ -84,7 +106,6 @@ const styles = theme => ({
   title: {
     marginBottom: 16,
     fontSize: 14,
-    color: theme.palette.text.secondary,
   },
   pos: {
     marginBottom: 12,
@@ -98,6 +119,10 @@ const styles = theme => ({
     margin: theme.spacing.unit,
     width: 400
   },
+  cardImg: {
+    height: 100,
+    width: 100
+  }
 });
 
 export default withStyles(styles)(ListingsPage);
