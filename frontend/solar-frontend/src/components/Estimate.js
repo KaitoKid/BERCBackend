@@ -45,7 +45,7 @@ function PaperSheet(props) {
         >
 
         <Typography type="headline" component="h3">
-          $2,642/month
+          $2,642/year
 
           <br/>
         </Typography>

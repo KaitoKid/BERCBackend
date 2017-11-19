@@ -77,19 +77,10 @@ class CreateListingText extends React.Component {
             id="Area"
             value={this.state.area}
             onChange={this.handleChange('area')}
-
+            endAdornment={<InputAdornment position="end">sqft</InputAdornment>}
           />
         </FormControl>
 
-        <FormControl fullWidth className={classes.formControl}>
-          <InputLabel htmlFor="cost">Cost</InputLabel>
-          <Input
-            id="cost"
-            value={this.state.cost}
-            onChange={this.handleChange('cost')}
-            startAdornment={<InputAdornment position="start">$</InputAdornment>}
-          />
-        </FormControl>
 
       </div>
     );
