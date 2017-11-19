@@ -5,7 +5,7 @@ import Paper from 'material-ui/Paper';
 import Grid from 'material-ui/Grid';
 import SimpleMediaCard from '../components/SimpleMediaCard';
 import RangeSlider from '../components/RangeSlider';
-<<<<<<< HEAD
+
 import  {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
 const data = [
       {name: '11/10/17', pv: 2400, amt: 2400},
@@ -17,10 +17,10 @@ const data = [
       {name: '11/16/17', pv: 4300, amt: 2100},
       {name: '11/17/17', pv: 4300, amt: 2100},
 ];
-=======
+
 import DetailedCard from '../components/DetailedCard';
 import PaperSheet from '../components/PaperSheet';
->>>>>>> origin/home
+
 
 const styles = theme => ({
   root: {
@@ -58,7 +58,6 @@ function CenteredGrid(props) {
         direction={direction}
         justify={justify}
       >
-<<<<<<< HEAD
         
        <SimpleMediaCard /> 
        <RangeSlider />
@@ -76,14 +75,6 @@ function CenteredGrid(props) {
 
       </Grid>   
 
-      
-
-
-      
-
-
-=======
->>>>>>> origin/home
 
        <DetailedCard />
        <PaperSheet />
