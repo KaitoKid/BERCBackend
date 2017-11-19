@@ -4,6 +4,17 @@ import Card, { CardActions, CardContent, CardMedia } from 'material-ui/Card';
 import Typography from 'material-ui/Typography';
 import Grid from 'material-ui/Grid';
 import { Link } from 'react-router-dom'
+import  {LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend} from 'recharts';
+const chartdata = [
+      {name: '11/10/17', EnergyGenerated: 2400, amt: 2400},
+      {name: '11/11/17', EnergyGenerated: 1398, amt: 2210},
+      {name: '11/12/17', EnergyGenerated: 9800, amt: 2290},
+      {name: '11/13/17', EnergyGenerated: 3908, amt: 2000},
+      {name: '11/14/17', EnergyGenerated: 4800, amt: 2181},
+      {name: '11/15/17', EnergyGenerated: 3800, amt: 2500},
+      {name: '11/16/17', EnergyGenerated: 4300, amt: 2100},
+      {name: '11/17/17', EnergyGenerated: 4300, amt: 2100},
+];
 
 class HomePage extends React.Component {
 
@@ -58,11 +69,14 @@ class HomePage extends React.Component {
           </Grid>
           <Grid item sm={6}>
             <Card>
-            <CardMedia
-              className={classes.media}
-              image="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Photovoltaik_Dachanlage_Hannover_-_Schwarze_Heide_-_1_MW.jpg/280px-Photovoltaik_Dachanlage_Hannover_-_Schwarze_Heide_-_1_MW.jpg"
-              title=""
-            />
+              <LineChart width={800} height={500} data={chartdata} margin={{top: 5, right: 30, left: 20, bottom: 5}}>
+                 <XAxis dataKey="name"/>
+                 <YAxis name='Power' unit='kw'/>
+                 <CartesianGrid strokeDasharray="3 3"/>
+                 <Tooltip/>
+                 <Legend />
+                 <Line type="monotone" dataKey="EnergyGenerated" stroke="#8884d8" activeDot={{r: 8}}/>
+              </LineChart>
             <CardContent>
               <Typography type="headline" component="h2">
                 Revenue Generated
