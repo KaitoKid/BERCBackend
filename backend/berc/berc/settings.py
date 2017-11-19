@@ -10,6 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
+SECRET_KEY = 'MY SECRET KEY'
+import django
+django.setup()
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -38,8 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'solar',
+    'solar.apps.SolarConfig',
+    'solar.profile.Profile',
+    'django.contrib.sites',
 ]
+SITE_ID = 1
 
 
 MIDDLEWARE = [
